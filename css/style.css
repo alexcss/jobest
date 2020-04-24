@@ -581,7 +581,7 @@ h2 {
   font-size: 36px;
 }
 
-h3 {
+h3, .h3 {
   font-size: 30px;
 }
 
@@ -599,7 +599,7 @@ h3 {
     font-size: 56px;
   }
 
-  h3 {
+  h3, .h3 {
     font-size: 46px;
   }
 }
@@ -1132,6 +1132,10 @@ select {
     width: 50%;
   }
 }
+.ba-reviews-title {
+  margin-bottom: -10px;
+}
+
 @media screen and (min-width: 640px) {
   .ba-reviews-row {
     display: -webkit-box;
@@ -1143,6 +1147,7 @@ select {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0 20px;
   }
 }
 @media screen and (min-width: 640px) {
@@ -1158,7 +1163,7 @@ select {
 }
 
 .ba-review {
-  padding: 114px 50px 80px;
+  padding: 114px 46px 80px;
   border-radius: 20px;
   background-color: white;
   -webkit-box-shadow: 4px 6.928px 32.55px 2.45px rgba(33, 138, 218, 0.1);
@@ -1168,6 +1173,10 @@ select {
   position: relative;
   font-size: 20px;
   text-align: center;
+  height: calc(100% - 180px);
+}
+.ba-review > :last-child {
+  margin-bottom: 0;
 }
 .ba-review__img {
   position: absolute;
@@ -1208,7 +1217,7 @@ select {
 }
 @media screen and (min-width: 640px) {
   .ba-footer h4 {
-    margin-bottom: 60px;
+    margin-bottom: 52px;
   }
 }
 .ba-footer a {
@@ -1220,7 +1229,7 @@ select {
 }
 
 .ba-container--small {
-  max-width: 1245px;
+  max-width: 1250px;
 }
 
 @media screen and (min-width: 640px) {
@@ -1231,7 +1240,16 @@ select {
 }
 @media screen and (min-width: 1024px) {
   .ba-footer-links-col {
-    width: 25%;
+    width: 28%;
+  }
+  .ba-footer-links-col:nth-child(2) {
+    width: 27%;
+  }
+  .ba-footer-links-col:nth-child(3) {
+    width: 29%;
+  }
+  .ba-footer-links-col:nth-child(4) {
+    width: 16%;
   }
 }
 
@@ -1247,26 +1265,20 @@ select {
 }
 
 .ba-footer-list {
-  margin: 0 0 60px;
+  margin: 0 0 64px;
   padding: 0;
   list-style: none;
   font-size: 18px;
 }
 .ba-footer-list li + li {
-  margin-top: 8px;
+  margin-top: 7px;
 }
-@media screen and (min-width: 640px) {
-  .ba-footer-list li + li {
-    margin-top: 18px;
-  }
-}
-
 .ba-subscribe {
   margin-bottom: 60px;
 }
 @media screen and (min-width: 640px) {
   .ba-subscribe {
-    margin-bottom: 130px;
+    margin-bottom: 122px;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1290,6 +1302,7 @@ select {
 @media screen and (min-width: 1024px) {
   .ba-subscribe__title {
     text-align: left;
+    margin-bottom: 0;
   }
 }
 .ba-subscribe__form {
@@ -1368,5 +1381,41 @@ select {
   background-image: -webkit-gradient(linear, right top, left top, color-stop(1%, #18386b), to(#2963bb));
   background-image: -o-linear-gradient(right, #18386b 1%, #2963bb 100%);
   background-image: linear-gradient(to left, #18386b 1%, #2963bb 100%);
+}
+
+.ba-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.ba-socials a + a {
+  margin-left: 32px;
+}
+.ba-socials a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-image: -webkit-gradient(linear, right top, left top, color-stop(1%, #18386b), to(#2963bb));
+  background-image: -o-linear-gradient(right, #18386b 1%, #2963bb 100%);
+  background-image: linear-gradient(to left, #18386b 1%, #2963bb 100%);
+  color: #fff;
+}
+.ba-socials a svg {
+  fill: currentColor;
 }
 /*# sourceMappingURL=style.css.map */
